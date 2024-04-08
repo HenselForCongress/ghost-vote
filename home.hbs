@@ -49,24 +49,43 @@ into the {body} of the default.hbs template --}}
         </div>
 
         <!-- Issues Section -->
-        <section class="issues-section">
-            <h2 class="section-title">Issues</h2>
-            <p class="section-description">We believe in being transparent about our standpoints. Here are the issues we are currently focusing on:</p>
-            <div class="post-feed issues-feed">
-                {{!-- Insert logic to display 4-6 featured 'Issues' posts --}}
-                <a href="/tag/issues/" class="view-all-button">View All Issues</a>
+        <section class="site-section issues-section">
+            <div class="inner">
+                <h2 class="section-title">Issues</h2>
+                <p class="section-description">Lorem Ipsum</p>
+
+                <!-- Use the get helper to fetch featured posts with the tag "Issues" -->
+                {{#get "posts" filter="tag:issues+featured:true" limit="6" as |featuredIssues|}}
+                    <div class="post-feed issues-feed">
+                        {{#foreach featuredIssues}}
+                            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                            {{> "post-card"}}
+                        {{/foreach}}
+                    </div>
+                {{/get}}
+
+                <a href="/tag/issues/" class="button">View All Issues</a>
             </div>
         </section>
-
+<hr  />
         <!-- Latest Updates Section -->
-        <section class="latest-updates-section">
-            <h2 class="section-title">Latest Updates</h2>
-            <div class="post-feed updates-feed">
-                {{!-- Insert logic to display 4-6 posts excluding 'Issues' --}}
-                <a href="/latest-updates/" class="view-all-button">View Latest Updates</a>
+        <section class="site-section latest-updates-section">
+            <div class="inner">
+                <h2 class="section-title">Latest Updates</h2>
+                <p class="section-description">Lorem Ipsum</p>
+                <!-- Use the get helper to fetch all posts excluding those with the tag "Issues" -->
+                {{#get "posts" filter="tag:-issues+featured:true" limit="6" as |latestUpdates|}}
+                    <div class="post-feed updates-feed">
+                        {{#foreach latestUpdates}}
+                            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                            {{> "post-card"}}
+                        {{/foreach}}
+                    </div>
+                {{/get}}
+
+                <a href="/latest-updates/" class="button">View All Updates</a>
             </div>
         </section>
-
         <!-- Main post-feed and pagination -->
         <div class="post-feed">
             {{#foreach posts}}
@@ -78,3 +97,4 @@ into the {body} of the default.hbs template --}}
 
     </div>
 </main>
+<!-- I am not a fan of frontend dev, so I'm using AI to help make it pretty. -->
