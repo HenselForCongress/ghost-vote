@@ -55,10 +55,19 @@ into the {body} of the default.hbs template --}}
                 <p class="section-description">Lorem Ipsum</p>
 
                 <!-- Use the get helper to fetch featured posts with the tag "Issues" -->
+                {{!-- Fetch featured posts excluding "Issues" tag --}}
                 {{#get "posts" filter="tag:issues+featured:true" limit="6" as |featuredIssues|}}
                     <div class="post-feed issues-feed">
                         {{#foreach featuredIssues}}
-                            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                            {{> "post-card"}}
+                        {{/foreach}}
+                    </div>
+                {{/get}}
+
+                {{!-- Fetch non-featured posts excluding "Issues" tag, but only if necessary --}}
+                {{#get "posts" filter="tag:issues+featured:false" limit="6" as |nonFeaturedIssues|}}
+                    <div class="post-feed issues-feed non-featured">
+                        {{#foreach nonFeaturedIssues}}
                             {{> "post-card"}}
                         {{/foreach}}
                     </div>
@@ -101,4 +110,4 @@ into the {body} of the default.hbs template --}}
     </div>
 </main>
 <!-- I am not a fan of frontend dev, so I'm using AI to help make it pretty. -->
-<script src="{{asset "assets/js/home.js"}}"></script>
+<script src="{{asset 'js/home.js'}}"></script>
