@@ -28,14 +28,14 @@ production stylesheet in assets/built/screen.css
 
 /* Import CSS reset and base styles */
 @import "global.css";
+@import "home.css";
 
 :root {
-
     /* Colours */
     --color-green: #a4d037;
     --color-yellow: #fecd35;
     --color-red: #f05230;
-    --color-darkgrey: #15171A;
+    --color-darkgrey: #15171a;
     --color-midgrey: #738a94;
     --color-lightgrey: #f1f1f1;
     --color-secondary-text: #979797;
@@ -53,12 +53,12 @@ production stylesheet in assets/built/screen.css
      */
 
     /* Fonts */
-    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
     --font-serif: Georgia, Times, serif;
     --font-mono: Menlo, Courier, monospace;
-
 }
-
 
 /* 2. Layout - Page building blocks
 /* ---------------------------------------------------------- */
@@ -86,7 +86,6 @@ production stylesheet in assets/built/screen.css
     max-width: 1200px;
     width: 100%;
 }
-
 
 /* 3. Site Header
 /* ---------------------------------------------------------- */
@@ -218,7 +217,10 @@ production stylesheet in assets/built/screen.css
     font-size: 2.4rem;
 }
 
-.has-cover .site-header-content.left-aligned :is(.site-logo, .site-title) + .site-description {
+.has-cover
+    .site-header-content.left-aligned
+    :is(.site-logo, .site-title)
+    + .site-description {
     font-size: 2.2rem;
 }
 
@@ -258,7 +260,6 @@ production stylesheet in assets/built/screen.css
     }
 }
 
-
 /* 4. Site Navigation
 /* ---------------------------------------------------------- */
 
@@ -275,7 +276,8 @@ production stylesheet in assets/built/screen.css
     color: #fff;
 }
 
-:is(.home-template, .paged:not(.tag-template):not(.author-template)).has-cover .gh-head {
+:is(.home-template, .paged:not(.tag-template):not(.author-template)).has-cover
+    .gh-head {
     position: absolute;
     top: 0;
     right: 0;
@@ -425,7 +427,6 @@ production stylesheet in assets/built/screen.css
     max-height: 40px;
 }
 
-
 /* Primary Navigation
 /* ---------------------------------------------------------- */
 
@@ -483,7 +484,6 @@ production stylesheet in assets/built/screen.css
     }
 }
 
-
 /* Dropdown
 /* ---------------------------------------------------------- */
 
@@ -500,7 +500,8 @@ production stylesheet in assets/built/screen.css
     text-align: left;
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 7px 20px -5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04),
+        0 7px 20px -5px rgba(0, 0, 0, 0.15);
     transform: translate3d(0, 6px, 0);
     transition: opacity 0.3s, transform 0.2s;
 }
@@ -534,7 +535,6 @@ production stylesheet in assets/built/screen.css
 .is-dropdown-mega .gh-dropdown li a {
     padding: 8px 0;
 }
-
 
 /* Secondary Navigation
 /* ---------------------------------------------------------- */
@@ -606,7 +606,6 @@ production stylesheet in assets/built/screen.css
     }
 }
 
-
 /* Search
 /* ---------------------------------------------------------- */
 
@@ -646,7 +645,6 @@ production stylesheet in assets/built/screen.css
         display: none;
     }
 }
-
 
 /* Mobile Menu Trigger
 /* ---------------------------------------------------------- */
@@ -697,7 +695,6 @@ production stylesheet in assets/built/screen.css
     bottom: 14px;
     transform: rotate(-45deg);
 }
-
 
 /* Mobile Menu
 /* ---------------------------------------------------------- */
@@ -835,7 +832,6 @@ production stylesheet in assets/built/screen.css
     }
 }
 
-
 /* 5. Post Feed
 /* ---------------------------------------------------------- */
 
@@ -897,7 +893,8 @@ production stylesheet in assets/built/screen.css
     padding-bottom: 0;
 }
 
-.post-card.keep-ratio:not(.post-card-large):not(.post-card-full) .post-card-image-link::after {
+.post-card.keep-ratio:not(.post-card-large):not(.post-card-full)
+    .post-card-image-link::after {
     padding-bottom: 0;
 }
 
@@ -910,7 +907,8 @@ production stylesheet in assets/built/screen.css
     object-fit: cover;
 }
 
-.post-card.keep-ratio:not(.post-card-large):not(.post-card-full) .post-card-image {
+.post-card.keep-ratio:not(.post-card-large):not(.post-card-full)
+    .post-card-image {
     position: static;
 }
 
@@ -1018,7 +1016,10 @@ production stylesheet in assets/built/screen.css
     font-family: var(--font-sans);
 }
 
-.post-card:not(.post-card-large):not(.post-card-full):not(.dynamic):not(.no-image) .post-card-excerpt {
+.post-card:not(.post-card-large):not(.post-card-full):not(.dynamic):not(
+        .no-image
+    )
+    .post-card-excerpt {
     -webkit-line-clamp: 2;
 }
 
@@ -1083,7 +1084,6 @@ production stylesheet in assets/built/screen.css
     margin: 0;
     padding: 0;
 }
-
 
 /* Special Styling for home page grid (below):
 
@@ -1214,7 +1214,6 @@ html.no-infinite-scroll .pagination {
     }
 }
 
-
 /* 6. Single Post
 /* ---------------------------------------------------------- */
 
@@ -1304,7 +1303,10 @@ use it for applying any other styles. */
 .kg-width-full.kg-content-wide {
     --gap: max(4vmin, 20px);
     --main: min(var(--content-width, 720px), 100% - var(--gap) * 2);
-    --wide: minmax(0, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2));
+    --wide: minmax(
+        0,
+        calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2)
+    );
     --full: minmax(var(--gap), 1fr);
 
     display: grid;
@@ -1333,7 +1335,6 @@ use it for applying any other styles. */
     width: 100%;
 }
 
-
 /* Content
 /* ---------------------------------------------------------- */
 
@@ -1348,7 +1349,9 @@ headings, text, images and lists. We deal with cards lower down. */
 }
 
 /* Remove space between full-width cards */
-.gh-content > .kg-width-full + .kg-width-full:not(.kg-width-full.kg-card-hascaption + .kg-width-full) {
+.gh-content
+    > .kg-width-full
+    + .kg-width-full:not(.kg-width-full.kg-card-hascaption + .kg-width-full) {
     margin-top: 0;
 }
 
@@ -1403,7 +1406,7 @@ is the very first element in the post content */
 }
 
 .gh-content > p img {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 .page-template .gh-content:only-child > *:first-child:not(.kg-width-full) {
@@ -1437,7 +1440,7 @@ is the very first element in the post content */
 }
 
 .gh-content .kg-toggle-card .kg-toggle-heading-text {
-    font-size: 2.0rem;
+    font-size: 2rem;
 }
 
 .has-sans-body .gh-content > blockquote,
@@ -1485,7 +1488,7 @@ is the very first element in the post content */
     font-weight: 400 !important;
     font-size: 0.9em;
     line-height: 1em;
-    color: #15171A;
+    color: #15171a;
     background: #f0f6f9;
     border-radius: 0.25em;
 }
@@ -1498,7 +1501,7 @@ is the very first element in the post content */
     line-height: 1.5em;
     background: var(--color-darkgrey);
     border-radius: 5px;
-    box-shadow: 0 2px 6px -2px rgba(0,0,0,.1), 0 0 1px rgba(0,0,0,.4);
+    box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);
 }
 
 .gh-content ol ol li {
@@ -1532,7 +1535,6 @@ is the very first element in the post content */
         left: min(-4vmin, -20px);
     }
 }
-
 
 /* Cards
 /* ---------------------------------------------------------- */
@@ -1598,22 +1600,20 @@ except for when immediately preceeded by a heading */
     font-family: var(--font-serif);
 }
 
-
 /* Captions */
 figcaption {
     padding: 1.5rem 1.5rem 0;
     text-align: center;
-    color: rgba(0,0,0,0.5);
+    color: rgba(0, 0, 0, 0.5);
     font-size: 1.3rem;
     line-height: 1.4em;
 }
 figcaption strong {
-    color: rgba(0,0,0,0.8);
+    color: rgba(0, 0, 0, 0.8);
 }
 figcaption a {
     text-decoration: underline;
 }
-
 
 /* Highly specific styles for traditional Instagram embeds */
 iframe.instagram-media {
@@ -1626,7 +1626,6 @@ iframe.instagram-media {
 iframe.instagram-media + script + :not([id]) {
     margin-top: 6vmin;
 }
-
 
 /* Card captions
 /* ---------------------------------------------------------- */
@@ -1685,20 +1684,39 @@ iframe.instagram-media + script + :not([id]) {
     white-space: nowrap;
     vertical-align: top;
     -webkit-overflow-scrolling: touch;
-    background: radial-gradient(ellipse at left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0 center, radial-gradient(ellipse at right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center;
+    background: radial-gradient(
+                ellipse at left,
+                rgba(0, 0, 0, 0.2) 0%,
+                rgba(0, 0, 0, 0) 75%
+            )
+            0 center,
+        radial-gradient(
+                ellipse at right,
+                rgba(0, 0, 0, 0.2) 0%,
+                rgba(0, 0, 0, 0) 75%
+            )
+            100% center;
     background-attachment: scroll, scroll;
     background-size: 10px 100%, 10px 100%;
     background-repeat: no-repeat;
 }
 
 .gh-content table:not(.gist table) td:first-child {
-    background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
     background-size: 20px 100%;
     background-repeat: no-repeat;
 }
 
 .gh-content table:not(.gist table) td:last-child {
-    background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+    background-image: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
     background-position: 100% 0;
     background-size: 20px 100%;
     background-repeat: no-repeat;
@@ -1719,7 +1737,6 @@ iframe.instagram-media + script + :not([id]) {
     padding: 6px 12px;
     border: color-mod(var(--color-wash) l(-1%) s(-5%)) 1px solid;
 }
-
 
 /* 6.1. Post Byline
 /* ---------------------------------------------------------- */
@@ -1783,7 +1800,6 @@ iframe.instagram-media + script + :not([id]) {
     }
 }
 
-
 /* 6.2. Subscribe
 /* ---------------------------------------------------------- */
 
@@ -1833,7 +1849,6 @@ iframe.instagram-media + script + :not([id]) {
     border-radius: 6px;
 }
 
-
 /* 6.3. Read more
 /* ---------------------------------------------------------- */
 
@@ -1882,7 +1897,6 @@ iframe.instagram-media + script + :not([id]) {
     margin: 60px 0 44px;
 }
 
-
 .comments-head {
     display: flex;
     align-items: baseline;
@@ -1909,7 +1923,6 @@ iframe.instagram-media + script + :not([id]) {
     width: 100%;
     max-width: 720px;
 }
-
 
 /* 7. Author Template
 /* ---------------------------------------------------------- */
@@ -1957,7 +1970,6 @@ iframe.instagram-media + script + :not([id]) {
         max-width: 640px;
     }
 }
-
 
 /* 8. Tag Template
 /* ---------------------------------------------------------- */
@@ -2044,7 +2056,6 @@ iframe.instagram-media + script + :not([id]) {
     }
 }
 
-
 /* 10. Site Footer
 /* ---------------------------------------------------------- */
 
@@ -2065,7 +2076,7 @@ iframe.instagram-media + script + :not([id]) {
     display: grid;
     grid-gap: 40px;
     grid-template-columns: auto 1fr auto;
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 1.3rem;
 }
 
@@ -2076,11 +2087,11 @@ iframe.instagram-media + script + :not([id]) {
 }
 
 .site-footer a {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .site-footer a:hover {
-    color: rgba(255,255,255,1);
+    color: rgba(255, 255, 255, 1);
     text-decoration: none;
 }
 
@@ -2135,7 +2146,6 @@ iframe.instagram-media + script + :not([id]) {
     }
 }
 
-
 /* 11. Dark Mode
 /* ---------------------------------------------------------- */
 
@@ -2174,7 +2184,14 @@ html.dark-mode .post-card-image {
     background: var(--color-darkmode);
 }
 
-html.dark-mode :is(.post-card-tags, .post-card-meta, .article-tag a, .byline-meta-content, .pagination .page-number) {
+html.dark-mode
+    :is(
+        .post-card-tags,
+        .post-card-meta,
+        .article-tag a,
+        .byline-meta-content,
+        .pagination .page-number
+    ) {
     color: color-mod(var(--color-secondary-text) l(-22%));
 }
 
@@ -2280,11 +2297,19 @@ html.dark-mode figcaption {
 }
 
 html.dark-mode .gh-content table:not(.gist table) td:first-child {
-    background-image: linear-gradient(to right, var(--color-darkmode) 50%, color-mod(var(--color-darkmode) a(0%)) 100%);
+    background-image: linear-gradient(
+        to right,
+        var(--color-darkmode) 50%,
+        color-mod(var(--color-darkmode) a(0%)) 100%
+    );
 }
 
 html.dark-mode .gh-content table:not(.gist table) td:last-child {
-    background-image: linear-gradient(to left, var(--color-darkmode) 50%, color-mod(var(--color-darkmode) a(0%)) 100%);
+    background-image: linear-gradient(
+        to left,
+        var(--color-darkmode) 50%,
+        color-mod(var(--color-darkmode) a(0%)) 100%
+    );
 }
 
 html.dark-mode .gh-content table:not(.gist table) th {
@@ -2366,7 +2391,14 @@ html.dark-mode .footer-cta-title {
         background: var(--color-darkmode);
     }
 
-    html.auto-color :is(.post-card-tags, .post-card-meta, .article-tag a, .byline-meta-content, .pagination .page-number) {
+    html.auto-color
+        :is(
+            .post-card-tags,
+            .post-card-meta,
+            .article-tag a,
+            .byline-meta-content,
+            .pagination .page-number
+        ) {
         color: color-mod(var(--color-secondary-text) l(-22%));
     }
 
@@ -2472,11 +2504,19 @@ html.dark-mode .footer-cta-title {
     }
 
     html.auto-color .gh-content table:not(.gist table) td:first-child {
-        background-image: linear-gradient(to right, var(--color-darkmode) 50%, color-mod(var(--color-darkmode) a(0%)) 100%);
+        background-image: linear-gradient(
+            to right,
+            var(--color-darkmode) 50%,
+            color-mod(var(--color-darkmode) a(0%)) 100%
+        );
     }
 
     html.auto-color .gh-content table:not(.gist table) td:last-child {
-        background-image: linear-gradient(to left, var(--color-darkmode) 50%, color-mod(var(--color-darkmode) a(0%)) 100%);
+        background-image: linear-gradient(
+            to left,
+            var(--color-darkmode) 50%,
+            color-mod(var(--color-darkmode) a(0%)) 100%
+        );
     }
 
     html.auto-color .gh-content table:not(.gist table) th {
@@ -2517,12 +2557,14 @@ html.dark-mode .footer-cta-title {
 
     @media (max-width: 767px) {
         html.auto-color .gh-head-open:not(.has-cover) #gh-head,
-        html.auto-color .gh-head-open:not(.has-cover) #gh-head .gh-head-actions {
+        html.auto-color
+            .gh-head-open:not(.has-cover)
+            #gh-head
+            .gh-head-actions {
             background: var(--color-darkmode);
         }
     }
 }
-
 
 /* 12. Lightbox
 /* ---------------------------------------------------------- */
@@ -2716,7 +2758,10 @@ html.dark-mode .footer-cta-title {
     background-size: 264px 88px;
 }
 
-@media (-webkit-min-device-pixel-ratio: 1.1), (-webkit-min-device-pixel-ratio: 1.09375), (min-resolution: 105dpi), (min-resolution: 1.1dppx) {
+@media (-webkit-min-device-pixel-ratio: 1.1),
+    (-webkit-min-device-pixel-ratio: 1.09375),
+    (min-resolution: 105dpi),
+    (min-resolution: 1.1dppx) {
     .pswp--svg .pswp__button,
     .pswp--svg .pswp__button--arrow--left::before,
     .pswp--svg .pswp__button--arrow--right::before {
@@ -2842,7 +2887,9 @@ html.dark-mode .footer-cta-title {
     text-transform: uppercase;
 }
 
-.pswp__caption__center .post-caption-meta-item + .post-caption-meta-item::before {
+.pswp__caption__center
+    .post-caption-meta-item
+    + .post-caption-meta-item::before {
     padding: 0 4px;
     content: "\02022";
 }

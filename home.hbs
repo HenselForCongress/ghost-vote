@@ -1,13 +1,10 @@
 {{!< default}}
-{{!-- The tag above means: insert everything in this file
-into the {body} of the default.hbs template --}}
+{{!-- The tag above means: insert everything in this file into the {body} of the default.hbs template --}}
 
 <div class="site-header-content outer{{#match @custom.header_style "Left aligned"}} left-aligned{{/match}}{{#unless @custom.show_publication_cover}}{{#match @custom.header_style "Hidden"}} no-content{{/match}}{{/unless}}">
 
     {{#if @custom.show_publication_cover}}
         {{#if @site.cover_image}}
-            {{!-- This is a responsive image, it loads different sizes depending on device
-            https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
             <img class="site-header-cover"
                 srcset="{{img_url @site.cover_image size="s"}} 300w,
                         {{img_url @site.cover_image size="m"}} 600w,
@@ -39,75 +36,49 @@ into the {body} of the default.hbs template --}}
 
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
-    <div class="inner">
+<div class="inner posts">
 
-        <!-- Featured categories (Get Involved, Disclosure, Donate) -->
-        <div class="featured-categories">
-            <a href="/get-involved/" class="featured-category">Get Involved</a>
-            <a href="/disclosure/" class="featured-category">Disclosure</a>
-            <a href="/donate/" class="featured-category">Donate</a>
-        </div>
+<div class="featured-categories">
+    <a href="/get-involved/" class="featured-category">Get Involved</a>
+    <a href="/disclosure/" class="featured-category">Disclosure</a>
+    <a href="/donate/" class="featured-category">Donate</a>
+</div>
 
-        <!-- Issues Section -->
-        <section class="site-section issues-section">
-            <div class="inner">
-                <h2 class="section-title">Issues</h2>
-                <p class="section-description">Lorem Ipsum</p>
-
-                <!-- Use the get helper to fetch featured posts with the tag "Issues" -->
-                {{!-- Fetch featured posts excluding "Issues" tag --}}
-                {{#get "posts" filter="tag:issues+featured:true" limit="6" as |featuredIssues|}}
-                    <div class="post-feed issues-feed">
-                        {{#foreach featuredIssues}}
-                            {{> "post-card"}}
-                        {{/foreach}}
-                    </div>
-                {{/get}}
-
-                {{!-- Fetch non-featured posts excluding "Issues" tag, but only if necessary --}}
-                {{#get "posts" filter="tag:issues+featured:false" limit="6" as |nonFeaturedIssues|}}
-                    <div class="post-feed issues-feed non-featured">
-                        {{#foreach nonFeaturedIssues}}
-                            {{> "post-card"}}
-                        {{/foreach}}
-                    </div>
-                {{/get}}
-
-                <a href="/tag/issues/" class="button">View All Issues</a>
-            </div>
-        </section>
-<hr  />
-        <!-- Latest Updates Section -->
-        <section class="site-section latest-updates-section">
-            <div class="inner">
-                <h2 class="section-title">Latest Updates</h2>
-                <p class="section-description">Lorem Ipsum</p>
-                <!-- Use the get helper to fetch all posts excluding those with the tag "Issues" -->
-                {{!-- Fetch featured posts excluding "Issues" tag --}}
-                {{#get "posts" filter="tag:-issues+featured:true" limit="6" as |featuredUpdates|}}
-                    <div class="post-feed updates-feed">
-                        {{#foreach featuredUpdates}}
-                            {{> "post-card"}}
-                        {{/foreach}}
-                    </div>
-                {{/get}}
-
-                {{!-- Fetch non-featured posts excluding "Issues" tag, but only if necessary --}}
-                {{#get "posts" filter="tag:-issues+featured:false" limit="6" as |nonFeaturedUpdates|}}
-                    <div class="post-feed updates-feed non-featured">
-                        {{#foreach nonFeaturedUpdates}}
-                            {{> "post-card"}}
-                        {{/foreach}}
-                    </div>
-                {{/get}}
-
-                <a href="/latest-updates/" class="button">View All Updates</a>
-            </div>
-        </section>
-
-
-
+    <div class="image-row">
+        <img src="https://via.placeholder.com/200" alt="Placeholder Image 1" width=auto>
+        <img src="https://via.placeholder.com/200" alt="Placeholder Image 2" width=auto>
+        <img src="https://via.placeholder.com/200" alt="Placeholder Image 3" width=auto>
+        <img src="https://via.placeholder.com/200" alt="Placeholder Image 4" width=auto>
     </div>
+
+    {{!-- Articles appear after this line --}}
+    <div class="post-feed">
+        {{#foreach posts}}
+            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+            {{> "post-card"}}
+        {{/foreach}}
+    </div>
+
+    {{pagination}}
+
+    <!-- Issues Section -->
+    <section class="site-section issues-section">
+        <div class="inner">
+            <h2 class="section-title">Issues</h2>
+            <!-- Fetch featured posts excluding 'Issues' tag -->
+            {{#get "posts" filter="tag:Issues" limit="6" as |issuesPosts|}}
+                <div class="issue-feed">
+                    {{#foreach issuesPosts}}
+                    <article class="issue-card post">
+                        {{> "issue-card"}}
+                    </article>
+                    {{/foreach}}
+                </div>
+            {{/get}}
+            <!-- Consider adding a 'View All' button if needed -->
+        </div>
+    </section>
+    <hr/>
+
+</div>
 </main>
-<!-- I am not a fan of frontend dev, so I'm using AI to help make it pretty. -->
-<script src="{{asset 'js/home.js'}}"></script>

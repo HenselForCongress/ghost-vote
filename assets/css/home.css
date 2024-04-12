@@ -1,0 +1,18 @@
+/* Increase specificity to ensure these styles are not overridden */
+.inner.posts .image-row {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure images stay in a single row */
+    justify-content: space-between; /* This will space out the images evenly */
+    align-items: center; /* Center images vertically */
+}
+
+.inner.posts .image-row img {
+    width: 23%; /* Adjust width to ensure all images fit in one row */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 1%; /* Space between images */
+    flex: 0 0 auto; /* Prevents images from growing or shrinking */
+}
+
+.inner.posts .image-row img:last-child {
+    margin-right: 0; /* Remove margin from the last image */
+}

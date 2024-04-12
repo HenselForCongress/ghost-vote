@@ -1,0 +1,16 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\ncd \/Users\/bhensel\/repos\/HenselForCongress\/ghost-cli\nghost start"
+    },
+    "clean" : {
+      "enabled" : true
+    },
+    "run" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\ncd \/Users\/bhensel\/repos\/HenselForCongress\/ghost-cli\nghost restart"
+    }
+  },
+  "openLogOnRun" : "fail"
+}
