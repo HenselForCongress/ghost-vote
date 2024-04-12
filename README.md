@@ -1,6 +1,7 @@
 # Ghost Vote
 
-A
+Run this to fix css
+`npm run zip`
 
 # Casper
 

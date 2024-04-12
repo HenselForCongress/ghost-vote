@@ -1,18 +1,107 @@
-/* Increase specificity to ensure these styles are not overridden */
-.inner.posts .image-row {
+.image-gallery {
+    margin-bottom: 20px; /* Adjust as needed for space between images and articles */
+}
+
+.image-row {
     display: flex;
-    flex-wrap: nowrap; /* Ensure images stay in a single row */
-    justify-content: space-between; /* This will space out the images evenly */
-    align-items: center; /* Center images vertically */
+    justify-content: space-between;
 }
 
-.inner.posts .image-row img {
-    width: 23%; /* Adjust width to ensure all images fit in one row */
+.image-container {
+    flex: 1; /* Allows image container to grow and shrink as needed */
+    box-sizing: border-box;
+    padding: 5px; /* Adjust if necessary to give some space around images */
+    text-align: center; /* Center the images and text within the container */
+}
+
+.image-container img {
+    max-width: 100%;
     height: auto; /* Maintain aspect ratio */
-    margin-right: 1%; /* Space between images */
-    flex: 0 0 auto; /* Prevents images from growing or shrinking */
 }
 
-.inner.posts .image-row img:last-child {
-    margin-right: 0; /* Remove margin from the last image */
+.image-caption {
+    margin-top: 5px; /* Spacing between image and caption */
+    font-size: 0.9em; /* Adjust as needed for caption size */
+}
+
+.gallery-divider {
+    margin-top: 20px; /* Adjust as needed for space between the images and the hr */
+}
+
+/* For larger screens, use the flex property to equally space the images */
+@media (min-width: 768px) {
+    .image-row {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+}
+
+/* For smaller screens (like mobile devices), stack with a minimum of two images per row */
+@media (max-width: 767px) {
+    .image-row {
+        flex-wrap: wrap; /* Allow items to wrap as needed */
+    }
+
+    .image-container {
+        flex-basis: 50%; /* Two images per row */
+        max-width: 50%; /* Two images per row */
+    }
+
+    .image-container img {
+        width: auto; /* Maintain aspect ratio */
+    }
+}
+
+
+/* Issue Feed */
+
+.issue-feed {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust between 300px and 1fr depending on available space */
+    gap: 20px;
+}
+
+/* If you want to give these cards a specific aspect ratio, you can adjust the code below */
+.issue-grid-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.issue-grid-card .issue-card-image-link {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px; /* Reduced the space below the image link */
+}
+
+.issue-grid-card .issue-card-content-link .issue-card-header {
+    margin-top: 0; /* Removes any top margin from the header */
+}
+
+.issue-grid-card .issue-card-title {
+    margin-top: 0; /* If title has top margin, removing it */
+}
+
+.issue-grid-card .issue-card-image {
+    width: 100%;
+    height: auto;
+}
+
+.issue-grid-card .issue-card-content {
+    flex: 1;
+}
+.view-all-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333; /* Use your theme's accent color */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.view-all-button:hover {
+    background-color: #555; /* Darker shade for hover effect */
 }

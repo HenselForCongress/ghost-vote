@@ -38,47 +38,88 @@
 <main id="site-main" class="site-main outer">
 <div class="inner posts">
 
-<div class="featured-categories">
-    <a href="/get-involved/" class="featured-category">Get Involved</a>
-    <a href="/disclosure/" class="featured-category">Disclosure</a>
-    <a href="/donate/" class="featured-category">Donate</a>
-</div>
 
-    <div class="image-row">
-        <img src="https://via.placeholder.com/200" alt="Placeholder Image 1" width=auto>
-        <img src="https://via.placeholder.com/200" alt="Placeholder Image 2" width=auto>
-        <img src="https://via.placeholder.com/200" alt="Placeholder Image 3" width=auto>
-        <img src="https://via.placeholder.com/200" alt="Placeholder Image 4" width=auto>
-    </div>
+  {{!-- This code snippet should go right after <div class="inner posts"> --}}
+  <div class="image-gallery">
+      <div class="image-row">
 
-    {{!-- Articles appear after this line --}}
+          <div class="image-container">
+                <a href="https://placeholder.com" target="_blank" rel="noopener">
+                    <img src="https://placehold.co/600x400.svg" alt="Placeholder Image">
+                </a>
+                <p class="image-caption">Volunteer</p>
+            </div>
+
+          <div class="image-container">
+                <a href="https://placeholder.com" target="_blank" rel="noopener">
+                    <img src="https://placehold.co/600x400.svg" alt="Placeholder Image">
+                </a>
+                <p class="image-caption">Finance Data</p>
+            </div>
+
+          <div class="image-container">
+                <a href="https://placeholder.com" target="_blank" rel="noopener">
+                    <img src="https://placehold.co/600x400.svg" alt="Placeholder Image">
+                </a>
+                <p class="image-caption">Donate</p>
+            </div>
+
+          <div class="image-container">
+                <a href="https://placeholder.com" target="_blank" rel="noopener">
+                    <img src="https://placehold.co/600x400.svg" alt="Placeholder Image">
+                </a>
+                <p class="image-caption">Learn More</p>
+            </div>
+
+      </div>
+  </div>
+
+  {{!-- Articles appear after this line --}}
+
+
+
+
+
+
+<!-- Issues Section -->
+  <section class="site-section issues-section">
+      <div class="inner">
+          <h2 class="section-title">Issues</h2>
+          {{!-- Fetch featured posts with 'Issues' tag --}}
+          {{#get "posts" filter="tag:issues" limit="6" as |issuesPosts|}}
+              <div class="issue-feed">
+                  {{#foreach issuesPosts}}
+                  <article class="issue-card post">
+                      {{> "issue-card"}}
+                  </article>
+                  {{/foreach}}
+              </div>
+              <!-- Always show 'View All' button -->
+              <center><a href="{{@site.url}}/topics/issues/" class="view-all-button">All Issues 👀 </a></center>
+          {{/get}}
+      </div>
+  </section>
+  <hr class="gallery-divider">
+
+
+    {{!-- Everything else --}}
+    <h2 class="section-title">Everything else</h2>
     <div class="post-feed">
-        {{#foreach posts}}
-            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-            {{> "post-card"}}
-        {{/foreach}}
+        {{!-- Fetch and display posts that do not have the 'Issues' tag --}}
+        {{#get "posts" filter="tag:-issues" include="tags" as |otherPosts|}}
+            {{#foreach otherPosts}}
+                {{!-- The tag below includes the markup for each post from the partials/post-card.hbs --}}
+                {{> "post-card"}}
+            {{/foreach}}
+        {{/get}}
     </div>
 
-    {{pagination}}
+    {{!-- Include pagination for other posts --}}
+    {{#get "posts" filter="tag:-issues" include="tags"}}
+        {{pagination}}
+    {{/get}}
 
-    <!-- Issues Section -->
-    <section class="site-section issues-section">
-        <div class="inner">
-            <h2 class="section-title">Issues</h2>
-            <!-- Fetch featured posts excluding 'Issues' tag -->
-            {{#get "posts" filter="tag:Issues" limit="6" as |issuesPosts|}}
-                <div class="issue-feed">
-                    {{#foreach issuesPosts}}
-                    <article class="issue-card post">
-                        {{> "issue-card"}}
-                    </article>
-                    {{/foreach}}
-                </div>
-            {{/get}}
-            <!-- Consider adding a 'View All' button if needed -->
-        </div>
-    </section>
-    <hr/>
 
 </div>
 </main>
+<script src="{{asset 'js/home.js'}}"></script>
