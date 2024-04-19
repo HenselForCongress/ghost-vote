@@ -2,14 +2,14 @@
   "actions" : {
     "build" : {
       "enabled" : true,
-      "script" : "#!\/bin\/sh\ncd \/Users\/bhensel\/repos\/HenselForCongress\/ghost-cli\nghost start"
+      "script" : "#!\/bin\/sh\ncd \/Users\/bhensel\/repos\/HenselForCongress\/ghost-cli\nghost start\nghost restart"
     },
     "clean" : {
       "enabled" : true
     },
     "run" : {
       "enabled" : true,
-      "script" : "#!\/bin\/sh\ncd \/Users\/bhensel\/repos\/HenselForCongress\/ghost-cli\nghost restart"
+      "script" : "#!\/bin\/sh\nnpm run zip"
     }
   },
   "openLogOnRun" : "fail"

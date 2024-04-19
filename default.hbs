@@ -81,22 +81,33 @@
         {{{body}}}
     </div>
 
-    {{!-- The global footer at the very bottom of the screen --}}
-    <footer class="site-footer outer">
-        <div class="inner">
-            <nav class="site-footer-nav">
-                {{navigation type="secondary"}}
-            </nav>
 
-            {{!<div class="gh-powered-by"><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>--}}
-        </div>
-<div class="footer-block">
-            <p>PAID FOR BY HENSEL FOR CONGRESS</p>
-            <section class="copyright">
-                &copy; Copyright {{date format="YYYY"}} All rights reserved.
-            </section>
-        </div>
-    </footer>
+
+    {{!-- The global footer at the very bottom of the screen --}}
+   <footer class="site-footer outer">
+       <div class="inner">
+           <div class="footer-links">
+               <div class="footer-nav">
+                   {{navigation type="secondary"}}
+               </div>
+               <div class="footer-info">
+                   <a href="/privacy">Privacy Policy</a>
+                   <a href="/terms">Terms of Service</a>
+                   <a href="/media">Media Resources</a>
+               </div>
+               <div class="footer-external">
+                   <a href="https://github.com/henselForCongress/" target="_blank" rel="noopener">GitHub</a>
+                   <a href="https://github.com/HenselForCongress/ghost-vote/issues" target="_blank" rel="noopener">Report a Problem</a>
+               </div>
+           </div>
+           <div class="footer-box">
+               PAID FOR BY HENSEL FOR CONGRESS
+           </div>
+           <div class="footy-footer">
+               &copy; {{date format="YYYY"}} All rights reserved.
+           </div>
+       </div>
+   </footer>
 
 
 </div>

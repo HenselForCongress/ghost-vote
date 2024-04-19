@@ -42,6 +42,7 @@ production stylesheet in assets/built/screen.css
     --color-border: #e1e1e1;
     --color-wash: #e5eff5;
     --color-darkmode: #151719;
+    --footer-bg-color: #6E7379;
 
     /*
     An accent color is also set by Ghost itself in
@@ -2065,7 +2066,7 @@ iframe.instagram-media + script + :not([id]) {
     padding-top: 48px;
     padding-bottom: 140px;
     color: #fff;
-    background: color-mod(var(--color-darkgrey) l(-5%));
+    background: color-mod(var(--color-midgrey) l(-5%));
 }
 
 .page-template .site-footer {
@@ -2087,11 +2088,13 @@ iframe.instagram-media + script + :not([id]) {
 }
 
 .site-footer a {
-    color: rgba(255, 255, 255, 0.7);
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 20px; /* Space between links */
 }
 
 .site-footer a:hover {
-    color: rgba(255, 255, 255, 1);
+    color: #CACACA;
     text-decoration: none;
 }
 
@@ -2127,6 +2130,36 @@ iframe.instagram-media + script + :not([id]) {
     margin: 0 10px 0 0;
     background: #fff;
     border-radius: 100%;
+}
+
+.footer-links > div {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px; /* Space between rows of links */
+}
+
+.footer-box {
+    padding: 20px;
+    margin: 20px 0; /* Space above and below the box */
+    border: 2px solid #000000; /* Black border as requested */
+    text-align: center;
+    font-weight: bold;
+}
+
+.footy-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-links > div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .site-footer a {
+        margin-bottom: 10px; /* Space between links on small screens */
+    }
 }
 
 @media (max-width: 767px) {
