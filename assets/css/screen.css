@@ -53,11 +53,11 @@ production stylesheet in assets/built/screen.css
      */
 
     /* Fonts */
-    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
         "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
         "Helvetica Neue", sans-serif;
-    --font-serif: Georgia, Times, serif;
-    --font-mono: Menlo, Courier, monospace;
+    --font-serif: 'Montserrat', Georgia, Times, serif;
+    --font-mono: 'Montserrat', Menlo, Courier, monospace;
 }
 
 /* 2. Layout - Page building blocks
