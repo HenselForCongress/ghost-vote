@@ -102,17 +102,19 @@
         "type": "select",
         "options": [
           "Modern sans-serif",
-          "Elegant serif"
+          "Elegant serif",
+          "Montserrat"
         ],
-        "default": "Modern sans-serif"
+        "default": "Montserrat"
       },
       "body_font": {
         "type": "select",
         "options": [
           "Modern sans-serif",
-          "Elegant serif"
+          "Elegant serif",
+          "Montserrat"
         ],
-        "default": "Elegant serif"
+        "default": "Montserrat"
       },
       "show_publication_cover": {
         "type": "boolean",
@@ -146,7 +148,7 @@
           "Dark",
           "Auto"
         ],
-        "default": "Light"
+        "default": "Auto"
       },
       "post_image_style": {
         "type": "select",
