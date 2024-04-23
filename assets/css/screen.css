@@ -2161,6 +2161,7 @@ iframe.instagram-media + script + :not([id]) {
     margin: 20px 0;
     width: 100%;
     font-size: 14px;
+    align-items: center;
 }
 
 @media (max-width: 768px) {
