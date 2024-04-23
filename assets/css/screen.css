@@ -2159,7 +2159,7 @@ iframe.instagram-media + script + :not([id]) {
     align-self: center; /* Ensures central alignment */
     padding: 10px;
     margin: 20px 0;
-    border: 1px solid #000;
+    border: 1px solid #FFFFFF;
     text-align: center;
     background-color: #3066BD;
     color: #FFFFFF;
