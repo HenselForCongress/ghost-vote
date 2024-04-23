@@ -2066,7 +2066,7 @@ iframe.instagram-media + script + :not([id]) {
     margin: max(12vmin, 64px) 0 0 0;
     padding-top: 48px;
     padding-bottom: 140px;
-    background-color: var(--footer-bg-color); /* Corrected variable usage */
+    background-color: var(--footer-bg-color);
     color: #fff;
     font-size: 16px;
 }
@@ -2081,10 +2081,6 @@ iframe.instagram-media + script + :not([id]) {
     align-items: center;
     margin: auto;
     text-align: center;
-    grid-gap: 40px; /* Effective on larger screens */
-    grid-template-columns: auto 1fr auto; /* Effective on larger screens */
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 1.3rem;
 }
 
 .site-footer a, .site-footer-nav a {
@@ -2101,7 +2097,7 @@ iframe.instagram-media + script + :not([id]) {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0 0 20px;
+    margin: 0;
     padding: 0;
     list-style: none;
 }
@@ -2109,9 +2105,6 @@ iframe.instagram-media + script + :not([id]) {
 .site-footer-nav li {
     display: inline-flex;
     align-items: center;
-    padding: 0;
-    margin: 0;
-    line-height: 2em;
 }
 
 .site-footer-nav a {
@@ -2123,7 +2116,6 @@ iframe.instagram-media + script + :not([id]) {
 
 .site-footer-nav li:not(:first-child) a:before {
     content: "";
-    display: block;
     width: 2px;
     height: 2px;
     margin: 0 10px 0 0;
@@ -2131,25 +2123,44 @@ iframe.instagram-media + script + :not([id]) {
     border-radius: 100%;
 }
 
+.site-footer .footer-nav ul, .site-footer .footer-nav ol {
+    list-style: none; /* Removes bullets or numbering */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margins */
+}
+
+.site-footer .footer-nav li {
+    padding: 0; /* Ensure no padding around list items */
+    margin: 0; /* Ensure no margin around list items */
+}
+
 .footer-links {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    margin-bottom: 20px;
 }
 
-.footer-links > div, .footer-external {
+.footer-links > div {
+    flex: 1;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
+.footer-info, .footer-external {
+    display: flex;
+    flex-direction: row; /* Aligns links horizontally */
+    justify-content: space-between; /* Spreads links evenly */
+    width: 100%;
+}
+
 .paid-for-box {
+    align-self: center; /* Ensures central alignment */
     padding: 10px;
     margin: 20px 0;
     border: 2px solid #000;
     text-align: center;
-    font-weight: normal;
     background-color: #fff;
     color: #333;
     width: auto;
@@ -2161,7 +2172,6 @@ iframe.instagram-media + script + :not([id]) {
     margin: 20px 0;
     width: 100%;
     font-size: 14px;
-    align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -2179,8 +2189,6 @@ iframe.instagram-media + script + :not([id]) {
     .site-footer .copyright, .site-footer .copyright a {
         color: #fff;
         font-size: 1.5rem;
-    }
-    .site-footer .copyright {
         margin-bottom: 16px;
     }
 }
