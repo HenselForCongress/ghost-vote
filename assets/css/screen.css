@@ -2161,8 +2161,8 @@ iframe.instagram-media + script + :not([id]) {
     margin: 20px 0;
     border: 1px solid #000;
     text-align: center;
-    background-color: #fff;
-    color: #333;
+    background-color: #3066BD;
+    color: #FFFFFF;
     width: auto;
     max-width: 60%;
 }
