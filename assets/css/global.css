@@ -498,19 +498,19 @@ h6 {
     align-items: center;
 }
 
-.footer-box {
+.paid-for-box {
     padding: 10px;
     margin: 20px 0;
     border: 2px solid #000000; /* Black border */
     text-align: center;
-    font-weight: normal; /* Less noticeable */
-    background-color: #EBEBEB; /* Lighter background for the box */
-    color: #333; /* Darker text color for contrast */
+    font-weight: normal;
+    background-color: #fff;
+    color: #333;
     width: auto;
-    max-width: 80%;
+    max-width: 60%;
 }
 
-.footy-footer, .footy-footer p {
+.copywright-footer, .copywright-footer p {
     text-align: center;
     margin: 20px 0;
     width: 100%;
