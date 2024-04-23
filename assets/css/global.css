@@ -469,7 +469,7 @@ h6 {
 
 /* Consolidated and Adjusted CSS for Footer */
 .site-footer {
-    background-color: #6E7379; /* Dark gray background */
+    background-color: --footer-bg-color;
     color: #ffffff; /* White text color for contrast */
     padding: 40px 0;
     font-size: 16px;
