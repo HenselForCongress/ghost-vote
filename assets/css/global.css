@@ -467,78 +467,69 @@ h6 {
 }
 /* Custom Styles Below */
 
+/* Consolidated and Adjusted CSS for Footer */
 .site-footer {
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #6E7379; /* Dark gray background */
+    color: #ffffff; /* White text color for contrast */
     padding: 40px 0;
     font-size: 16px;
 }
 
 .site-footer .inner {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     max-width: 1200px;
     margin: auto;
+    text-align: center;
 }
 
-.site-footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-.site-footer ul li {
-    margin-bottom: 10px; /* Spacing between links */
-}
-
-.site-footer ul li a {
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.site-footer ul li a:hover {
-    color: #CACACA; /* Change the color for hover state */
-}
-
-.footer-external a {
-    display: inline-block;
-    margin-right: 15px;
-    color: #333;
-    text-decoration: none;
-}
-
-.footer-external a:hover {
-    color: #CACACA;
-}
-
-.footer-links > div {
+.footer-links {
     display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 20px; /* Space between rows of links */
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px; /* Adjusted spacing */
+}
+
+.footer-links > div,
+.footer-external {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-box {
-    padding: 20px;
-    margin: 20px 0; /* Space above and below the box */
-    border: 2px solid #000000; /* Black border as requested */
+    padding: 10px;
+    margin: 20px 0;
+    border: 2px solid #000000; /* Black border */
     text-align: center;
-    font-weight: bold;
+    font-weight: normal; /* Less noticeable */
+    background-color: #EBEBEB; /* Lighter background for the box */
+    color: #333; /* Darker text color for contrast */
+    width: auto;
+    max-width: 80%;
 }
 
-.footy-footer p {
+.footy-footer, .footy-footer p {
     text-align: center;
     margin: 20px 0;
+    width: 100%;
+    font-size: 14px; /* Smaller font size */
+}
+
+.site-footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 10px 0; /* Vertical spacing for links */
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: #CACACA; /* Lighter gray for hover state */
 }
 
 @media (max-width: 768px) {
-    .footer-links > div {
+    .footer-links {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .site-footer a {
-        margin-bottom: 10px; /* Space between links on small screens */
     }
 }

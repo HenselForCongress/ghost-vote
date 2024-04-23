@@ -42,7 +42,7 @@ production stylesheet in assets/built/screen.css
     --color-border: #e1e1e1;
     --color-wash: #e5eff5;
     --color-darkmode: #151719;
-    --footer-bg-color: #6E7379;
+    --footer-bg-color: #3066BD;
 
     /*
     An accent color is also set by Ghost itself in
@@ -2132,24 +2132,9 @@ iframe.instagram-media + script + :not([id]) {
     border-radius: 100%;
 }
 
-.footer-links > div {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 20px; /* Space between rows of links */
-}
 
-.footer-box {
-    padding: 20px;
-    margin: 20px 0; /* Space above and below the box */
-    border: 2px solid #000000; /* Black border as requested */
-    text-align: center;
-    font-weight: bold;
-}
 
-.footy-footer {
-    text-align: center;
-    margin-top: 20px;
-}
+
 
 @media (max-width: 768px) {
     .footer-links > div {
