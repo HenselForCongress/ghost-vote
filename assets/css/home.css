@@ -11,6 +11,7 @@
     flex: 1; /* Allows image container to grow and shrink as needed */
     box-sizing: border-box;
     padding: 5px; /* Adjust if necessary to give some space around images */
+
     text-align: center; /* Center the images and text within the container */
 }
 

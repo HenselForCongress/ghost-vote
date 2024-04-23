@@ -2060,13 +2060,15 @@ iframe.instagram-media + script + :not([id]) {
 /* 10. Site Footer
 /* ---------------------------------------------------------- */
 
+/* 10. Site Footer */
 .site-footer {
     position: relative;
     margin: max(12vmin, 64px) 0 0 0;
     padding-top: 48px;
     padding-bottom: 140px;
+    background-color: var(--footer-bg-color); /* Corrected variable usage */
     color: #fff;
-    background: color-mod(var(--color-midgrey) l(-5%));
+    font-size: 16px;
 }
 
 .page-template .site-footer {
@@ -2074,28 +2076,25 @@ iframe.instagram-media + script + :not([id]) {
 }
 
 .site-footer .inner {
-    display: grid;
-    grid-gap: 40px;
-    grid-template-columns: auto 1fr auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    grid-gap: 40px; /* Effective on larger screens */
+    grid-template-columns: auto 1fr auto; /* Effective on larger screens */
     color: rgba(255, 255, 255, 0.7);
     font-size: 1.3rem;
 }
 
-.site-footer .copyright a {
-    color: #fff;
-    letter-spacing: -0.015em;
-    font-weight: 500;
-}
-
-.site-footer a {
+.site-footer a, .site-footer-nav a {
     color: #ffffff;
     text-decoration: none;
-    margin-right: 20px; /* Space between links */
+    transition: color 0.3s ease;
 }
 
 .site-footer a:hover {
     color: #CACACA;
-    text-decoration: none;
 }
 
 .site-footer-nav ul {
@@ -2132,18 +2131,41 @@ iframe.instagram-media + script + :not([id]) {
     border-radius: 100%;
 }
 
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
 
+.footer-links > div, .footer-external {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.paid-for-box {
+    padding: 10px;
+    margin: 20px 0;
+    border: 2px solid #000;
+    text-align: center;
+    font-weight: normal;
+    background-color: #fff;
+    color: #333;
+    width: auto;
+    max-width: 60%;
+}
 
+.copywright-footer, .copywright-footer p {
+    text-align: center;
+    margin: 20px 0;
+    width: 100%;
+    font-size: 14px;
+}
 
 @media (max-width: 768px) {
     .footer-links > div {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .site-footer a {
-        margin-bottom: 10px; /* Space between links on small screens */
     }
 }
 
@@ -2152,10 +2174,8 @@ iframe.instagram-media + script + :not([id]) {
         max-width: 500px;
         grid-template-columns: 1fr;
         grid-gap: 0;
-        text-align: center;
     }
-    .site-footer .copyright,
-    .site-footer .copyright a {
+    .site-footer .copyright, .site-footer .copyright a {
         color: #fff;
         font-size: 1.5rem;
     }
@@ -2163,6 +2183,7 @@ iframe.instagram-media + script + :not([id]) {
         margin-bottom: 16px;
     }
 }
+
 
 /* 11. Dark Mode
 /* ---------------------------------------------------------- */
