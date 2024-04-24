@@ -1,0 +1,105 @@
+# robots.txt for HenselForCongress.com
+# Democracy is like a software update, sometimes it takes a while to get the bugs out.
+
+##############################################
+#                User Agents
+##############################################
+# --- General Access ---
+User-agent: *
+# We welcome all bots, but please follow the rules laid down.
+
+# --- Specific Agents ---
+User-agent: OptimusPrime
+Disallow: /decepticons/
+# No Decepticons allowed.
+
+User-agent: MartyMcFly
+Disallow: /1985/
+# Sorry Marty, that year is off-limits!
+
+User-agent: Jan6er
+Disallow: /voting/
+Allow: /jail-time/
+# Yea, no treason here
+
+User-agent: DJT
+Disallow: *
+# My site, my rules. Trump is not welcome here
+
+
+
+##############################################
+#                  Sitemaps
+##############################################
+# It's not just a map, it's a treasure map. X marks the spot!
+Sitemap: https://henselforcongress.com/sitemap.xml
+# Tip: Ensure this sitemap is always updated with new content sections.
+
+##############################################
+#                RSS Feed(s) (Reference only)
+##############################################
+#
+# More info: https://ghost.org/integrations/custom-rss/
+#
+# --- Main Feed ---
+# https://henselforcongress.com/rss/
+
+# --- Issues ---
+# https://henselforcongress.com/topics/issues/rss/
+
+# --- Updates ---
+# https://henselforcongress.com/topics/updates/rss/
+
+# --- Press Releases ---
+# https://henselforcongress.com/topics/press-releases/rss/
+
+###################################################################
+#                        No Go Zones
+###################################################################
+# If you try to access these, remember: “You shall not pass!” - Gandalf
+
+Disallow: /ghost/
+# Sorry, we ain't afraid of no ghost, but you should be!
+
+Disallow: /p/
+# Psst... P stands for private. It's a secret!
+
+Disallow: /email/
+# No peeking at our emails. Privacy first!
+
+Disallow: /r/
+# This isn't Reddit. Stay out of the /r/ folder.
+
+Disallow: /secret-plans/
+# These are not the plans you are looking for...
+
+Disallow: /time-machine/
+# Only accessible if you're coming from the future.
+
+Disallow: /members/api/comments/counts/
+# Comment Counts
+
+Disallow: /webmentions/receive/
+# Who is talkin' 'bout us?
+
+
+
+##############################################
+#               Jokes and Fun
+##############################################
+# Joke for the road:
+# Why don't developers trust CSS?
+# Because it's always changing styles!
+
+# ASCII Art for your enjoyment:
+#     /\_/\
+#    ( o.o )
+#    > ^ <
+
+# Dear Bots, don't forget to remind your human operators to vote!
+# Democracy appreciates it!
+
+##############################################
+#                Final Reminders
+##############################################
+# Stay shiny, bots! <3 @TheBoatyMcBoatFace
