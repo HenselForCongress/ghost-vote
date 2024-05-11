@@ -45,7 +45,7 @@
             <div class="gh-head-brand">
                 <a class="gh-head-logo{{#unless @site.logo}} no-image{{/unless}}" href="{{@site.url}}">
                     {{#if @site.logo}}
-                        <img src="{{@site.logo}}" alt="{{@site.title}}">
+                        <img src="/cdn-cgi/image/width=150,quality=85,format=auto{{@site.logo}}" alt="{{@site.title}}">
                     {{else}}
                         {{@site.title}}
                     {{/if}}
