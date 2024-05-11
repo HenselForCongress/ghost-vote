@@ -28,7 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     {{!-- Preload the heavyweights and other stuff --}}
-    <link rel="preload" href="/cdn-cgi/image/width=150,quality=85,format=auto{{@site.logo}}" as="image">
+    <link rel="preload" href="/cdn-cgi/image/width=150,quality=85,format=auto/{{@site.logo}}" as="image">
 
     {{!-- Theme assets - use the {asset} helper to reference styles & scripts,
     this will take care of caching and cache-busting automatically --}}
@@ -48,7 +48,7 @@
             <div class="gh-head-brand">
                 <a class="gh-head-logo{{#unless @site.logo}} no-image{{/unless}}" href="{{@site.url}}">
                     {{#if @site.logo}}
-                        <img src="/cdn-cgi/image/width=150,quality=85,format=auto{{@site.logo}}" alt="{{@site.title}}">
+                        <img src="/cdn-cgi/image/width=150,quality=85,format=auto/{{@site.logo}}" alt="{{@site.title}}">
                     {{else}}
                         {{@site.title}}
                     {{/if}}
