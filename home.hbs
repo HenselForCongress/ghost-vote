@@ -6,12 +6,12 @@
     {{#if @custom.show_publication_cover}}
         {{#if @site.cover_image}}
             <img class="site-header-cover"
-                srcset="/cdn-cgi/image/width=300,quality=70,format=auto{{@site.cover_image}} 300w,
-                        /cdn-cgi/image/width=600,quality=70,format=auto{{@site.cover_image}} 600w,
-                        /cdn-cgi/image/width=1000,quality=70,format=auto{{@site.cover_image}} 1000w,
-                        /cdn-cgi/image/width=2000,quality=70,format=auto{{@site.cover_image}} 2000w"
+                srcset="/cdn-cgi/image/width=300,quality=70,format=auto/{{@site.cover_image}} 300w,
+                        /cdn-cgi/image/width=600,quality=70,format=auto/{{@site.cover_image}} 600w,
+                        /cdn-cgi/image/width=1000,quality=70,format=auto/{{@site.cover_image}} 1000w,
+                        /cdn-cgi/image/width=2000,quality=70,format=auto/{{@site.cover_image}} 2000w"
                 sizes="100vw"
-                src="/cdn-cgi/image/width=2000,quality=70,format=auto{{@site.cover_image}}"
+                src="/cdn-cgi/image/width=2000,quality=70,format=auto/{{@site.cover_image}}"
                 alt="{{@site.title}}"
                 loading="lazy"
             />
