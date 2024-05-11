@@ -29,6 +29,7 @@ production stylesheet in assets/built/screen.css
 /* Import CSS reset and base styles */
 @import "global.css";
 @import "home.css";
+@import "badge.css";
 
 :root {
     /* Colours */
@@ -42,7 +43,7 @@ production stylesheet in assets/built/screen.css
     --color-border: #e1e1e1;
     --color-wash: #e5eff5;
     --color-darkmode: #151719;
-    --footer-bg-color: #3066BD;
+    --footer-bg-color: #3066bd;
 
     /*
     An accent color is also set by Ghost itself in
@@ -54,11 +55,11 @@ production stylesheet in assets/built/screen.css
      */
 
     /* Fonts */
-    --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    --font-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
         "Helvetica Neue", sans-serif;
-    --font-serif: 'Montserrat', Georgia, Times, serif;
-    --font-mono: 'Montserrat', Menlo, Courier, monospace;
+    --font-serif: "Montserrat", Georgia, Times, serif;
+    --font-mono: "Montserrat", Menlo, Courier, monospace;
 }
 
 /* 2. Layout - Page building blocks
@@ -2083,14 +2084,15 @@ iframe.instagram-media + script + :not([id]) {
     text-align: center;
 }
 
-.site-footer a, .site-footer-nav a {
+.site-footer a,
+.site-footer-nav a {
     color: #ffffff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .site-footer a:hover {
-    color: #CACACA;
+    color: #cacaca;
 }
 
 .site-footer-nav ul {
@@ -2123,7 +2125,8 @@ iframe.instagram-media + script + :not([id]) {
     border-radius: 100%;
 }
 
-.site-footer .footer-nav ul, .site-footer .footer-nav ol {
+.site-footer .footer-nav ul,
+.site-footer .footer-nav ol {
     list-style: none; /* Removes bullets or numbering */
     padding: 0; /* Removes default padding */
     margin: 0; /* Removes default margins */
@@ -2148,7 +2151,8 @@ iframe.instagram-media + script + :not([id]) {
     align-items: center;
 }
 
-.footer-info, .footer-external {
+.footer-info,
+.footer-external {
     display: flex;
     flex-direction: row; /* Aligns links horizontally */
     justify-content: space-between; /* Spreads links evenly */
@@ -2159,15 +2163,16 @@ iframe.instagram-media + script + :not([id]) {
     align-self: center; /* Ensures central alignment */
     padding: 10px;
     margin: 20px 0;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #ffffff;
     text-align: center;
-    background-color: #3066BD;
-    color: #FFFFFF;
+    background-color: #3066bd;
+    color: #ffffff;
     width: auto;
     max-width: 60%;
 }
 
-.copywright-footer, .copywright-footer p {
+.copywright-footer,
+.copywright-footer p {
     text-align: center;
     margin: 20px 0;
     width: 100%;
@@ -2186,13 +2191,13 @@ iframe.instagram-media + script + :not([id]) {
         grid-template-columns: 1fr;
         grid-gap: 0;
     }
-    .site-footer .copyright, .site-footer .copyright a {
+    .site-footer .copyright,
+    .site-footer .copyright a {
         color: #fff;
         font-size: 1.5rem;
         margin-bottom: 16px;
     }
 }
-
 
 /* 11. Dark Mode
 /* ---------------------------------------------------------- */
