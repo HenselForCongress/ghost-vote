@@ -5,12 +5,12 @@
     {{#if feature_image}}
     <a class="issue-card-image-link" href="{{url}}">
         <img class="issue-card-image"
-            srcset="{{img_url feature_image size="s"}} 300w,
-                    {{img_url feature_image size="m"}} 600w,
-                    {{img_url feature_image size="l"}} 1000w,
-                    {{img_url feature_image size="xl"}} 2000w"
+            srcset="/cdn-cgi/image/width=300,quality=75,format=auto{{img_url feature_image}} 300w,
+                    /cdn-cgi/image/width=600,quality=75,format=auto{{img_url feature_image}} 600w,
+                    /cdn-cgi/image/width=1000,quality=75,format=auto{{img_url feature_image}} 1000w,
+                    /cdn-cgi/image/width=2000,quality=75,format=auto{{img_url feature_image}} 2000w"
             sizes="(max-width: 1000px) 400px, 800px"
-            src="{{img_url feature_image size="m"}}"
+            src="/cdn-cgi/image/width=600,quality=75,format=auto{{img_url feature_image}}"
             alt="{{title}}"
             loading="lazy"
         />
