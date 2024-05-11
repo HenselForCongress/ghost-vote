@@ -6,13 +6,14 @@
     {{#if @custom.show_publication_cover}}
         {{#if @site.cover_image}}
             <img class="site-header-cover"
-                srcset="{{img_url @site.cover_image size="s"}} 300w,
-                        {{img_url @site.cover_image size="m"}} 600w,
-                        {{img_url @site.cover_image size="l"}} 1000w,
-                        {{img_url @site.cover_image size="xl"}} 2000w"
+                srcset="/cdn-cgi/image/width=300,quality=70,format=auto{{@site.cover_image}} 300w,
+                        /cdn-cgi/image/width=600,quality=70,format=auto{{@site.cover_image}} 600w,
+                        /cdn-cgi/image/width=1000,quality=70,format=auto{{@site.cover_image}} 1000w,
+                        /cdn-cgi/image/width=2000,quality=70,format=auto{{@site.cover_image}} 2000w"
                 sizes="100vw"
-                src="{{img_url @site.cover_image size="xl"}}"
+                src="/cdn-cgi/image/width=2000,quality=70,format=auto{{@site.cover_image}}"
                 alt="{{@site.title}}"
+                loading="lazy"
             />
         {{/if}}
     {{/if}}
@@ -38,48 +39,40 @@
 <main id="site-main" class="site-main outer">
 <div class="inner posts">
 
-
   {{!-- This code snippet should go right after <div class="inner posts"> --}}
   <div class="image-gallery">
       <div class="image-row">
           <div class="image-container">
-                <a href="/get-involved/">
-                    <img src="https://content.henselforcongress.com/swifties/Volunteer.svg" alt="Volunteer" width=300 height=200 >
-                </a>
-                <p class="image-caption">Volunteer</p>
-            </div>
+              <a href="/get-involved/">
+                  <img src="/cdn-cgi/image/width=300,quality=75,format=auto/https://content.henselforcongress.com/swifties/Volunteer.svg" alt="Volunteer" width="300" loading="lazy">
+              </a>
+              <p class="image-caption">Volunteer</p>
+          </div>
 
           <div class="image-container">
-                <a href="/data">
-                    <img src="https://content.henselforcongress.com/swifties/Data.svg" alt="Data" width=100%>
-                </a>
-                <p class="image-caption">Campaign Finances</p>
-            </div>
+              <a href="/data">
+                  <img src="/cdn-cgi/image/width=300,quality=75,format=auto/https://content.henselforcongress.com/swifties/Data.svg" alt="Data" width="300" loading="lazy">
+              </a>
+              <p class="image-caption">Campaign Finances</p>
+          </div>
 
           <div class="image-container">
-                <a href="https://secure.anedot.com/hensel-for-congress/donate?utm_source=website&utm_medium=box&utm_campaign=homepage_donate" target="_blank" rel="noopener">
-                    <img src="https://content.henselforcongress.com/swifties/Donate.svg" alt="Donate" width=100%>
-                </a>
-                <p class="image-caption">Donate</p>
-            </div>
+              <a href="https://secure.anedot.com/hensel-for-congress/donate?utm_source=website&utm_medium=box&utm_campaign=homepage_donate" target="_blank" rel="noopener">
+                  <img src="/cdn-cgi/image/width=300,quality=75,format=auto/https://content.henselforcongress.com/swifties/Donate.svg" alt="Donate" width="300" loading="lazy">
+              </a>
+              <p class="image-caption">Donate</p>
+          </div>
 
           <div class="image-container">
-                <a href="/about/">
-                    <img src="https://content.henselforcongress.com/swifties/LearnMore.svg" alt="Bio" >
-                </a>
-                <p class="image-caption">About Bentley</p>
-            </div>
-
+              <a href="/about/">
+                  <img src="/cdn-cgi/image/width=300,quality=75,format=auto/https://content.henselforcongress.com/swifties/LearnMore.svg" alt="Bio" width="300" loading="lazy">
+              </a>
+              <p class="image-caption">About Bentley</p>
+          </div>
       </div>
+  </div>
 
-  {{!-- Articles appear after this line --}}
-
-
-
-
-
-
-<!-- Issues Section -->
+  <!-- Issues Section -->
   <section class="site-section issues-section">
       <div class="inner">
           <h2 class="section-title">Issues</h2>
@@ -97,8 +90,8 @@
           {{/get}}
       </div>
   </section>
-  <hr class="gallery-divider">
 
+  <hr class="gallery-divider">
 
     {{!-- Everything else --}}
     <h2 class="section-title">Everything else</h2>
@@ -116,7 +109,6 @@
     {{#get "posts" filter="tag:-issues" include="tags"}}
         {{pagination}}
     {{/get}}
-
 
 </div>
 </main>
