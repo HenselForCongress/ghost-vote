@@ -27,6 +27,9 @@
     {{!-- Google/Cloudflare Fonts --}}
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
+    {{!-- Preload the heavyweights and other stuff --}}
+    <link rel="preload" href="/cdn-cgi/image/width=150,quality=85,format=auto{{@site.logo}}" as="image">
+
     {{!-- Theme assets - use the {asset} helper to reference styles & scripts,
     this will take care of caching and cache-busting automatically --}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
