@@ -9,13 +9,23 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VE1ZM6S4MY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VE1ZM6S4MY');
+    </script>
+    <!-- End Google Analytics -->
+
     {{!-- Preload scripts --}}
     <link rel="preload" as="style" href="{{asset "built/screen.css"}}" />
     <link rel="preload" as="script" href="{{asset "built/casper.js"}}" />
 
     {{!-- Google/Cloudflare Fonts --}}
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
 
     {{!-- Theme assets - use the {asset} helper to reference styles & scripts,
     this will take care of caching and cache-busting automatically --}}
@@ -26,6 +36,7 @@
     {{ghost_head}}
 
 </head>
+
 <body class="{{body_class}} is-head-{{#match @custom.navigation_layout "Logo on cover"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Modern sans-serif"}} has-sans-body{{/match}}{{#if @custom.show_publication_cover}} has-cover{{/if}}">
 <div class="viewport">
 
