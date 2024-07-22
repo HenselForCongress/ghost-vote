@@ -89,6 +89,15 @@ production stylesheet in assets/built/screen.css
     width: 100%;
 }
 
+
+.gh-content-fullwidth {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 0;
+    overflow: hidden;
+}
+
+
 /* 3. Site Header
 /* ---------------------------------------------------------- */
 
