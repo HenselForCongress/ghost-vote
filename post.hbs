@@ -103,10 +103,12 @@ into the {body} tag of the default.hbs template --}}
     <section class="footer-cta outer">
         <div class="inner">
             {{#if @custom.email_signup_text}}<h2 class="footer-cta-title">{{@custom.email_signup_text}}</h2>{{/if}}
-            <a class="footer-cta-button" href="#/portal" data-portal>
-                <div class="footer-cta-input">Enter your email</div>
-                <span>Subscribe</span>
-            </a>
+
+            <form id="email-only-form" class="signup-form footer-cta-button" data-form-type="email-only">
+                <input type="email" name="email" class="footer-cta-input" placeholder="Enter your email" required>
+                <button type="submit"><span>Subscribe</span></button>
+            </form>
+
         </div>
     </section>
 {{/if}}
